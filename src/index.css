@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply antialiased text-[#111418] dark:text-white bg-background-light dark:bg-background-dark font-display;
+  }
+}
+
+/* Custom scrollbar for horizontal scrolling areas */
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+.hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* Custom scrollbar for dark mode editors */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1); 
+}
+::-webkit-scrollbar-thumb {
+    background: #482325; 
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #673235; 
+}
+
+.range-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    background: #ec131e;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 2px solid white;
+}
